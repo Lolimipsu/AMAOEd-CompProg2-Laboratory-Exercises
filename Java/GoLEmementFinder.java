@@ -12,7 +12,7 @@ public class GoLEmementFinder
         }
     }
 
-    // #3 checks if the previous or the next numbers are greater or lesser
+    // #2 checks if the previous or the next numbers are greater or lesser
      public static void numChecker(int array_elements[], int n)
      {
         // Traverse array from index 1 to n-2
@@ -20,9 +20,7 @@ public class GoLEmementFinder
         for (int i = 1; i < n - 1; i++)
         {
             if (array_elements[i] > array_elements[i - 1] && array_elements[i] > array_elements[i + 1])
-            {
-                System.out.print(array_elements[i] + " "); 
-            }
+                System.out.println(array_elements[i] + " "); 
         }
     }
 
