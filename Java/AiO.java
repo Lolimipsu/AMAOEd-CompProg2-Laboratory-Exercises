@@ -3,24 +3,20 @@ import java.util.Arrays;
 import java.io.IOException;
 
 // All in ONE (AiO)
-public class AiO
-{
+public class AiO {
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Main menu
-    public static void main(String[] args)throws IOException, InterruptedException 
-    {
+    public static void main(String[] args) throws IOException, InterruptedException {
         // Definitions
         Scanner input = new Scanner(System.in);
         int run_again = 0;
 
-        while (run_again !=2)
-        {
+        while (run_again != 2) {
             System.out.println("Which program would you like to run today?");
             System.out.println("1 - Do While Loop\n2 - Greater than or Less than Element Finder\n3 - Max Tries\nInput:");
             int menu_choice = input.nextInt();
 
-            switch (menu_choice)
-            {
+            switch (menu_choice) {
                 case 1:
                     String name;
                     int answer = 0;
@@ -58,22 +54,26 @@ public class AiO
                     break;
 
                 case 3:
-                    
+
+                    break;
+
+                default:
+                    System.out.println("Please choose a valid option.");
                     break;
 
             } // switch
-        System.out.println("\nWould you like to run the program again?\n1 - YES\t2 - NO");
-        run_again = input.nextInt();
-        Clear_Screen();
+            System.out.println("\n\nWould you like to run the program again?\n1 - YES\t2 - NO");
+            run_again = input.nextInt();
+            Clear_Screen();
         } // while loop
 
     } // main
-    
+
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Greater than or Less than Element Finder
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // #1 DEBUG PRINT
-    public static void printArray(int array_elements[]) {
+    private static void printArray(int array_elements[]) {
         int n = array_elements.length;
         for (int i = 0; i < n; i++) {
             System.out.println(array_elements[i] + " ");
@@ -81,7 +81,7 @@ public class AiO
     }
 
     // #2 checks if the previous or the next numbers are greater or lesser
-    public static void numChecker(int array_elements[], int n) {
+    private static void numChecker(int array_elements[], int n) {
         Arrays.sort(array_elements);
         int[] temporary_Array = new int[n];
         int Index = 0;
@@ -98,12 +98,10 @@ public class AiO
         for (int i = 0; i < n; i++)
             array_elements[i] = temporary_Array[i];
     }
+
     // CLEAR SCREEN
-    public static void Clear_Screen()throws IOException, InterruptedException
-    {
-        new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();  
+    private static void Clear_Screen() throws IOException, InterruptedException {
+        new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
     }
-    
+
 } // public class AiO
-
-
