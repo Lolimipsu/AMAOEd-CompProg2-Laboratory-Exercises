@@ -2,14 +2,14 @@ import java.util.Scanner;
 
 public class MaxTries {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         int attempts = 5,
             atm_pin = 1234,
             user_pin = 0;
 
         do {
             System.out.print("Input your ATM PIN:\n");
-            user_pin = sc.nextInt();
+            user_pin = input.nextInt();
 
             if (user_pin != atm_pin) {
                 attempts -= 1;
