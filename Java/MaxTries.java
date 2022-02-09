@@ -1,22 +1,34 @@
 import java.util.Scanner;
 
-public class MaxTries {
-    public static void main(String[] args) {
-        int atm_pin;
-        int max_tries = 0;
-        Scanner scan = new Scanner(System.in);
-        do {
-            System.out.println("Please input PIN:");
-            atm_pin = scan.nextInt();
+public class MaxTries 
+{
+    public static void main(String[] args) 
+    {
+        int atm_pin = 1234;
+        int user_pin = 0;
+        int totalAttempts = 5;
+        Scanner input = new Scanner(System.in);
 
-            if (atm_pin == 1234) {
-                System.out.println("Nice ATM pin lol");
-                max_tries += 5;
+        System.out.println("Enter your PIN:");
+        user_pin = input.nextInt();
+        do{
+            if(user_pin == atm_pin)
+            {
+                System.out.println("correct");
+                break;
+                
             }
-            else {
-                System.out.println("try again!\n");
-                max_tries += 1;
+
+            else if(user_pin != atm_pin)
+            {
+                System.out.println("wrong");
+                totalAttempts -=1;
+                
             }
-        } while (max_tries < 5);
+            else{  
+                 
+            }
+        }while(totalAttempts != 0);
+        System.out.println("No more attempts left");
     }
 }
