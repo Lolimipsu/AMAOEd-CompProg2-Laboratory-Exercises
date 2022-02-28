@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.io.IOException;
 
-public class Act1_Bank
+public class M_Act1_Bank
 {
     public static void main(String[] args) throws IOException, InterruptedException
     {
