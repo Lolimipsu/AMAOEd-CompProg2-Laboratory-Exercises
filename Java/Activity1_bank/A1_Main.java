@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.io.IOException;
 
-public class App {
+public class A1_Main {
   public static void main(String[] args) throws IOException, InterruptedException {
     //definitions
     double balance;
@@ -9,7 +9,7 @@ public class App {
     int user_choice;
     int run_again = 0;
     Scanner input = new Scanner(System.in);
-    B_Backend bb = new B_Backend();
+    A1_Backend bb = new A1_Backend();
 
     do {
       System.out.println("Balance: ");
