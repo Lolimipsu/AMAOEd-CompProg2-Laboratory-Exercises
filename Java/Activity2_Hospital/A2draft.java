@@ -32,6 +32,11 @@ public class A2draft {
         age = input.nextInt();
         // converts int to string
         String str_age = String.valueOf(age);
+        insertsContent(fname, lname, admission_date, disease, discharge_date, t_div, age, str_age);
+        printContent(data);
+    }
+
+    public static void insertsContent(String fname, String lname, String admission_date, String disease, String discharge_date, String t_div, int age, String str_age){
         try {
             if (age <= 12) {
                 System.out.println("PEDIATRIC");
@@ -50,14 +55,14 @@ public class A2draft {
             //TODO: handle exception
             System.out.println("Something went wrong, please try again.");
         }
-        printContent(data);
     }
-    //TODO: FIX THIS
+
     /// tries to print the content
     public static void printContent(String data) {
         
         // printing the content
         try {
+            System.out.println("");
             File myObj = new File("pediatric.txt");
             Scanner myReader = new Scanner(myObj);
             while (myReader.hasNextLine()) {
@@ -66,8 +71,7 @@ public class A2draft {
             }
             myReader.close();
           } catch (Exception e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
+            System.out.println("Something went wrong, please try again.");
           }
-    }
-}
+    }// public static void printContent(String data)
+}// public class A2draft 
