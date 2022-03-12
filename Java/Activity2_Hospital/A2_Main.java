@@ -17,7 +17,7 @@ public class A2_Main {
                 admission_date,
                 disease,
                 discharge_date;
-        String  spc = "    ";
+        String  spc = "\t\t";
 
         do {
             System.out.println("Welcome to Loremer's Hospital DBMS\nHow can I help you today?");
