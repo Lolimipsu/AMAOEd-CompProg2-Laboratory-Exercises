@@ -41,7 +41,7 @@ public class A2_Main {
                     age = input.nextInt();
                     // converts int to string
                     String str_age = String.valueOf(age);
-                    //a2b.add_to_masterlist(fname, lname, admission_date, disease, discharge_date, spc, age, str_age);
+                    a2b.add_to_masterlist(fname, lname, admission_date, disease, discharge_date, spc, age, str_age);
                     a2b.insertPatient(fname, lname, admission_date, disease, discharge_date, spc, age, str_age);
                     System.out.println("\n\nRun program again?\n1 = YES\n2 = NO");
                     run_again = input.nextInt();
