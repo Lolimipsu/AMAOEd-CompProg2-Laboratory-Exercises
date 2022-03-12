@@ -1,22 +1,23 @@
 import java.io.IOException;
+import java.text.ParseException;
 import java.io.File;
 import java.io.FileWriter;
 import java.util.Scanner;
 
 public class A2_Main {
-    public static void main(String[] args) throws IOException, InterruptedException {
+    public static void main(String[] args) throws IOException, InterruptedException, ParseException {
         // definitions
         Scanner input = new Scanner(System.in);
         A2_Backend a2b = new A2_Backend();
-        int age,
-            user_choice,
-            run_again = 0;
-        String fname,
-               lname,
-               admission_date,
-               disease,
-               discharge_date;
-        String t_div = "    ";
+        int     age,
+                user_choice,
+                run_again = 0;
+        String  fname,
+                lname,
+                admission_date,
+                disease,
+                discharge_date;
+        String  spc = "    ";
 
         do {
             System.out.println("Welcome to Loremer's Hospital DBMS\nHow can I help you today?");
@@ -40,8 +41,8 @@ public class A2_Main {
                     age = input.nextInt();
                     // converts int to string
                     String str_age = String.valueOf(age);
-                    //a2b.add_to_masterlist(fname, lname, admission_date, disease, discharge_date, t_div, age, str_age);
-                    a2b.insertPatient(fname, lname, admission_date, disease, discharge_date, t_div, age, str_age);
+                    //a2b.add_to_masterlist(fname, lname, admission_date, disease, discharge_date, spc, age, str_age);
+                    a2b.insertPatient(fname, lname, admission_date, disease, discharge_date, spc, age, str_age);
                     System.out.println("\n\nRun program again?\n1 = YES\n2 = NO");
                     run_again = input.nextInt();
                     a2b.cls();
