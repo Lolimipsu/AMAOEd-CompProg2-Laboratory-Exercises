@@ -83,6 +83,23 @@ public class A2_Backend {
         }
     } // public void insertPatient
 
+    public void print_all_content(String data) {
+        
+        // printing the content
+        try {
+            System.out.println("");
+            File myObj = new File("masterlist.txt");
+            Scanner myReader = new Scanner(myObj);
+            while (myReader.hasNextLine()) {
+              data = myReader.nextLine();
+              System.out.println(data);
+            }
+            myReader.close();
+          } catch (Exception e) {
+            System.out.println("ERROR: in printContent.\nSomething went wrong, please try again.");
+          }
+    }// public static void printContent
+
     // CLEARS SCREEN
     public void cls() throws IOException, InterruptedException 
     {
