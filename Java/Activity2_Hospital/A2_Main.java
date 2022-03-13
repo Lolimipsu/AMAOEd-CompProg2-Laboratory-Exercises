@@ -42,28 +42,28 @@ public class A2_Main {
                     String str_age = String.valueOf(age);
                     a2b.add_to_masterlist(fname, lname, admission_date, disease, discharge_date, spc, age, str_age);
                     a2b.insertPatient(fname, lname, admission_date, disease, discharge_date, spc, age, str_age);
-                    System.out.println("\n\nRun program again?\n8 = YES\n9 = NO");
+                    System.out.println("\n\nRun program again?\n1 = YES\n2 = NO");
                     run_again = input.nextInt();
                     a2b.cls();
                     break;
                 case 2:
                     System.out.println("FIRST NAME\t\tLAST NAME\t\tDISEASE\t\tAGE\t\tADMISSION DATE\t\tDISCHARGE DATE");
                     a2b.print_all_patients(data);
-                    System.out.println("\n\nRun program again?\n8 = YES\n9 = NO");
+                    System.out.println("\n\nRun program again?\n1 = YES\n2 = NO");
                     run_again = input.nextInt();
                     a2b.cls();
                     break;
                 case 3:
                     System.out.println("FIRST NAME\t\tLAST NAME\t\tDISEASE\t\tAGE\t\tADMISSION DATE\t\tDISCHARGE DATE");
                     a2b.print_adult_patients(data);
-                    System.out.println("\n\nRun program again?\n8 = YES\n9 = NO");
+                    System.out.println("\n\nRun program again?\n1 = YES\n2 = NO");
                     run_again = input.nextInt();
                     a2b.cls();
                     break;
                 case 4:
                     System.out.println("FIRST NAME\t\tLAST NAME\t\tDISEASE\t\tAGE\t\tADMISSION DATE\t\tDISCHARGE DATE");
                     a2b.print_pediatric_patients(data);
-                    System.out.println("\n\nRun program again?\n8 = YES\n9 = NO");
+                    System.out.println("\n\nRun program again?\n1 = YES\n2 = NO");
                     run_again = input.nextInt();
                     a2b.cls();
                     break;
@@ -75,6 +75,6 @@ public class A2_Main {
                     System.out.println("Please choose a valid option");
                     break;
             }
-        } while (run_again != 9);
+        } while (run_again != 2);
     }
 }
