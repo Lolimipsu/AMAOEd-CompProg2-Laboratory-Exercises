@@ -1,7 +1,5 @@
 import java.io.IOException;
 import java.text.ParseException;
-import java.io.File;
-import java.io.FileWriter;
 import java.util.Scanner;
 
 public class A2_Main {
@@ -61,15 +59,18 @@ public class A2_Main {
                     System.out.println("\n\nRun program again?\n8 = YES\n9 = NO");
                     run_again = input.nextInt();
                     a2b.cls();
+                    break;
                 case 4:
                     System.out.println("FIRST NAME\t\tLAST NAME\t\tDISEASE\t\tAGE\t\tADMISSION DATE\t\tDISCHARGE DATE");
                     a2b.print_pediatric_patients(data);
                     System.out.println("\n\nRun program again?\n8 = YES\n9 = NO");
                     run_again = input.nextInt();
                     a2b.cls();
+                    break;
                 case 5:
                     System.out.println("Closing app...");
                     run_again = 2;
+                    break;
                 default:
                     System.out.println("Please choose a valid option");
                     break;
