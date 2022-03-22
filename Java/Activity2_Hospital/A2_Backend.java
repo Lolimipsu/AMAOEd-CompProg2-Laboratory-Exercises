@@ -59,7 +59,7 @@ public class A2_Backend {
 
         try {
             if (age <= 12) {
-                System.out.println("Inserting...");
+                System.out.println("\nInserting...");
                 //System.out.println("TYPE: PEDIATRIC");
                 FileWriter myWriter = new FileWriter("pediatric.txt", true);
                 myWriter.write(fname.toUpperCase() + spc + lname.toUpperCase() + spc + disease.toUpperCase() + spc + str_age + spc + d_admission_date + spc + d_discharge_date + "\n");

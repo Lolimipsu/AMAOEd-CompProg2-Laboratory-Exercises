@@ -47,21 +47,21 @@ public class A2_Main {
                     a2b.cls();
                     break;
                 case 2:
-                    System.out.println("FIRST NAME\t\tLAST NAME\t\tDISEASE\t\tAGE\t\tADMISSION DATE\t\tDISCHARGE DATE");
+                    System.out.println("FIRST NAME\t\tLAST NAME\tDISEASE\t\t\tAGE\t\tADMISSION DATE\t\t\t\tDISCHARGE DATE");
                     a2b.print_all_patients(data);
                     System.out.println("\n\nRun program again?\n1 = YES\n2 = NO");
                     run_again = input.nextInt();
                     a2b.cls();
                     break;
                 case 3:
-                    System.out.println("FIRST NAME\t\tLAST NAME\t\tDISEASE\t\tAGE\t\tADMISSION DATE\t\tDISCHARGE DATE");
+                    System.out.println("FIRST NAME\t\tLAST NAME\tDISEASE\t\t\tAGE\t\tADMISSION DATE\t\t\t\tDISCHARGE DATE");
                     a2b.print_adult_patients(data);
                     System.out.println("\n\nRun program again?\n1 = YES\n2 = NO");
                     run_again = input.nextInt();
                     a2b.cls();
                     break;
                 case 4:
-                    System.out.println("FIRST NAME\t\tLAST NAME\t\tDISEASE\t\tAGE\t\tADMISSION DATE\t\tDISCHARGE DATE");
+                    System.out.println("FIRST NAME\t\tLAST NAME\tDISEASE\t\t\tAGE\t\tADMISSION DATE\t\t\t\tDISCHARGE DATE");
                     a2b.print_pediatric_patients(data);
                     System.out.println("\n\nRun program again?\n1 = YES\n2 = NO");
                     run_again = input.nextInt();
