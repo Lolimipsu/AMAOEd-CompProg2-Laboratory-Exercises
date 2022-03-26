@@ -10,6 +10,7 @@ public class A2_Main {
         int     age,
                 user_choice,
                 run_again = 0;
+                
         String  fname,
                 lname,
                 admission_date,

@@ -17,12 +17,15 @@ public class A2_Backend {
         SimpleDateFormat format = new SimpleDateFormat("MM-dd-yyyy");
         if(admission_date != null && admission_date.trim().length() > 0){
             d_admission_date = format.parse(admission_date);
-        }else{
+        }
+        else{
             System.out.println("ERROR! in admission date input");
         }
+
         if (discharge_date != null && discharge_date.trim().length() > 0){
             d_discharge_date = format.parse(discharge_date);
-        }else{
+        }
+        else{
             System.out.println("ERROR! in discharge date input");
         }
         /////////////////////////////////////////////////
@@ -47,12 +50,15 @@ public class A2_Backend {
         SimpleDateFormat format = new SimpleDateFormat("MM-dd-yyyy");
         if(admission_date != null && admission_date.trim().length() > 0){
             d_admission_date = format.parse(admission_date);
-        }else{
+        }
+        else{
             System.out.println("ERROR! Please follow the format MM-DD-YYYY");
         }
+
         if (discharge_date != null && discharge_date.trim().length() > 0){
             d_discharge_date = format.parse(discharge_date);
-        }else{
+        }
+        else{
             System.out.println("ERROR! Please follow the format MM-DD-YYYY");
         }
         /////////////////////////////////////////////////
@@ -68,14 +74,15 @@ public class A2_Backend {
                 System.out.println("Successfully wrote to the file.");
             }
             else {
-                System.out.println("Inserting...");
+                System.out.println("\nInserting...");
                 //System.out.println("TYPE: NOT PEDIATRIC");
                 FileWriter myWriter = new FileWriter("not_pediatric.txt", true);
                 myWriter.write(fname.toUpperCase() + spc + lname.toUpperCase() + spc + disease.toUpperCase() + spc + str_age + spc + d_admission_date + spc + d_discharge_date + "\n");
                 // TODO: REMOVE THE myWriter.close(); BECAUSE IT'S NOT MEANT TO CLOSE IMMIDIATELY
                 myWriter.close();
             }
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
             System.out.println("Something went wrong, please try again.");
             System.out.println("ERROR: in insertPatient class");
         }
@@ -83,7 +90,6 @@ public class A2_Backend {
 
     public void print_all_patients(String data) 
     {
-        
         // printing the content
         try {
             System.out.println("");
@@ -94,7 +100,8 @@ public class A2_Backend {
               System.out.println(data);
             }
             myReader.close();
-          } catch (Exception e) {
+          }
+          catch (Exception e) {
             System.out.println("ERROR: in print_All_Content.\nSomething went wrong, please try again.");
           }
     } // public void print_all_patients
@@ -112,14 +119,14 @@ public class A2_Backend {
               System.out.println(data);
             }
             myReader.close();
-          } catch (Exception e) {
+          }
+          catch (Exception e) {
             System.out.println("ERROR: in print_adult_patients.\nSomething went wrong, please try again.");
           }
     } // public void print_adult_patients
 
     public void print_pediatric_patients(String data) 
     {
-
         // printing the content
         try {
             System.out.println("");
@@ -130,7 +137,8 @@ public class A2_Backend {
               System.out.println(data);
             }
             myReader.close();
-          } catch (Exception e) {
+          }
+          catch (Exception e) {
             System.out.println("ERROR: in print_pediatric_patients.\nSomething went wrong, please try again.");
           }
     } // public void print_pediatric_patients

@@ -11,9 +11,10 @@ public class A1_Main {
     Scanner input = new Scanner(System.in);
     A1_Backend bb = new A1_Backend();
 
+    System.out.println("Balance: ");
+    balance = input.nextInt();
     do {
-      System.out.println("Balance: ");
-      balance = input.nextInt();
+      
       System.out.println("-------------------------------------------------------");
       System.out.println("Select an option:\n1 - Withdraw\n2 - Deposit\n3 - Exit");
       user_choice = input.nextInt();
